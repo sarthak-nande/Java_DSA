@@ -1,0 +1,38 @@
+package mathematics;
+
+public class HcfOfTwoNumbers {
+	
+	public static int naiveMethod(int a, int b) {
+		int res = Math.min(a, b);
+		
+		while(res > 0) {
+			if(a%res == 0 && b%res == 0) {
+				break;
+			}
+			res--;
+		}
+		
+		return res;
+	}
+	
+	public static int includianMethod(int a, int b) {
+		int res = 0;
+		
+		while(a != b) {
+			if(a>b) {
+				a = a - b;
+			}else {
+				b = b - a;
+			}
+		}
+		return a;
+	}
+	
+	public static void main(String args[]) {
+		int a = 10;
+		int b = 15;
+		
+		System.out.println("HCF is " + naiveMethod(a, b));
+	}
+
+}

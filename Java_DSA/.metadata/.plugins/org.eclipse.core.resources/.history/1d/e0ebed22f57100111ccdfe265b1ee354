@@ -1,0 +1,27 @@
+package mathematics;
+
+public class LcmOfTwoNumbers {
+	
+	public static int naiveMethod(int a, int b) {
+		int res = Math.max(a, b);
+		
+		while(res>0) {
+			if(res%a==0 && res%b == 0) {
+				break;
+			}
+			res++;
+		}
+		
+		return res;
+	}
+	
+	public static void main(String args[]) {
+		int a = 4;
+		int b =6;
+		
+		System.out.println("LCM of number is: " + naiveMethod(a, b));
+		
+		
+	}
+
+}

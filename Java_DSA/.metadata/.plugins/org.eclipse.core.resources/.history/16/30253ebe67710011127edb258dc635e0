@@ -1,0 +1,33 @@
+package mathematics;
+
+public class TrailingZeros {
+	
+	public static  int findFactorial(int num) {
+		int fact = 1;
+		for(int i=1; i<=num; i++) {
+			fact =  fact*i;
+		}
+		return fact;
+	}
+	
+	public static int brutForceCountZeros(int num) {
+		int res = 0;
+		int fact = findFactorial(num);
+		while(fact%10 == 0) {
+			res++;
+			fact = fact/10;
+		}
+		return res;
+	}
+	
+	public static void main(String agrs[]) {
+		int num = 10;
+		
+		int countTailingZeros = brutForceCountZeros(num);
+		
+		System.out.println("Trailing Zeros Are " + countTailingZeros);
+	}
+	
+	
+
+}
