@@ -1,0 +1,25 @@
+package mathematics;
+
+public class IterativePower {
+
+	public static int powerOfNumber(int x, int n) {
+		int res = 1;
+		
+		while(n>0) {
+			if(n%2 != 0) {
+				res = res * x;
+			}
+			x = x * x;
+			n = n / 2;
+		}
+		
+		return res;
+	}
+	
+	public static void main(String args[]) {
+		
+		int res = powerOfNumber(4, 5);
+		
+		System.out.println("Answer: " + res);
+	}
+}

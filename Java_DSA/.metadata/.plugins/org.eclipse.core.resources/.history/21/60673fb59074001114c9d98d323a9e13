@@ -1,0 +1,43 @@
+package mathematics;
+
+public class AllDevisorsOfNumber {
+	
+	public static void basicApproch(int n) {
+		for(int i=1;i<=n;i++) {
+			if(n%i==0) {
+				System.out.println(i);
+			}
+		}
+	}
+	
+	public static void mediumApproch(int n) {
+		for(int i=1;i*i<=n;i++) {
+			if(n%i==0) {
+				System.out.println(i);
+				
+				if(i!=n/i) {
+					System.out.println(n/i);
+				}
+			}
+		}
+	}
+	
+	public static void advanceApprovch(int n) {
+		int i;
+		for(i=1;i*i<n;i++) {
+			if(n%i==0) {
+				System.out.println(i);
+			}
+		}
+		for(int j = i;j>=1;j--) {
+			if(n%j==0) {
+				System.out.println(n/j);
+			}
+		}
+	}
+	
+	public static void main(String args[]) {
+		advanceApprovch(6);
+	}
+
+}
