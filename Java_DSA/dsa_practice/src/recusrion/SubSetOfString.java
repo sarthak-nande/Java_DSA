@@ -8,7 +8,6 @@ public class SubSetOfString {
 			System.out.print(curr + ", ");
 			return;
 		}
-		
 		subSet(str, curr, i+1);
 		subSet(str, curr+(str.charAt(i)), i+1);
 	}
