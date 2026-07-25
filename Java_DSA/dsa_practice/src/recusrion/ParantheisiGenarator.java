@@ -1,9 +1,9 @@
-package Practice;
+package recusrion;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlayGround {
+public class ParantheisiGenarator {
 	
 	public static void generate(List<String> result, String currentStr, int openCount, int closeCount, int n) {
 		if(currentStr.length() == n*2) {
@@ -27,8 +27,9 @@ public class PlayGround {
 		
 		generate(result, "", 0, 0, 3);
 		
-		System.out.println(result);
+		System.out.println(result);  
 		
 	}
+
 
 }
