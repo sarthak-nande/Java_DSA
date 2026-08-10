@@ -21,11 +21,11 @@ public class BinarySearch {
 		return -1;
 	}
 	
+	
 	public static void main(String[] args) {
 		int arr[] = {2,3,5,6,9,10};
 		
 		int index = searchingAlgoritham(arr,arr.length,9);
-		
 		System.out.println(index);
 	}
 
