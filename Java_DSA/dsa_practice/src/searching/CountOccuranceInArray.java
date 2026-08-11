@@ -49,15 +49,20 @@ public class CountOccuranceInArray {
 	
 	public static int countOccurance(int arr[], int n, int x) {
 		int firstOccurance = firstOccurance(arr, n, x);
-		int lastOccurnace = lastOccurance(arr, n, x);
+		if(firstOccurance == -1) { 
+			return 0;
+		} else {
+			int lastOccurnace = lastOccurance(arr, n, x);
+			 return lastOccurnace - firstOccurance + 1;
+		}
 		
-		return lastOccurnace - firstOccurance + 1;
+		
 	}
 	
 	public static void main(String[] args) {
 		int arr[] = {2,3,5,5,6,9,9,9,10};
 		
-		int index = countOccurance(arr,arr.length,9);
+		int index = countOccurance(arr,arr.length,1);
 		System.out.println(index);
 	}
 
