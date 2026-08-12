@@ -35,7 +35,7 @@ public class SearchInSortedRoatatedArray {
 	
 	public static void main(String[] args) {
 		int arr[] = {100,200,400,500,1,3,9};
-		int ans = solution(arr, arr.length-1, 9);
+		int ans = solution(arr, arr.length, 9);
 		System.out.println(ans);
 	}
 
