@@ -2,41 +2,19 @@ package sorting;
 
 public class InsertionSort {
 	
-	public static void swap(int arr[], int i, int j) {
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j]= temp;
-	}
-	
-	public static void basicApproch(int arr[], int n) {
-		int temp[] = new int[n];
+	public static void insertionSort(int[] arr) {
+		int n= arr.length;
 		
-		for(int i=0;i<n;i++) {
-			int min_index = 0;
-			for(int j=1;j<n;j++) {
-				if(arr[j]<arr[min_index]) {
-					min_index = j;
-				}
-			}
-			temp[i] = arr[min_index];
-			arr[min_index] = Integer.MAX_VALUE;
-		}
-		
-		for(int i=0;i<n;i++) {
-			arr[i] = temp[i];
-		}
-	}
-	
-	public static void advanceApproch(int arr[], int n) {
-		for(int i=0;i<n;i++) {
-			int mid_index = i;
+		for(int i=1;i<n;i++) {
+			int key = arr[i];
+			int j = i-1;
 			
-			for(int j=i+1;j<n;j++) {
-				if(arr[j]<arr[mid_index]) {
-					mid_index = j;
-				}
+			while(j>=0 && arr[j]>key) {
+				arr[j+1] = arr[j];
+				j--;
 			}
-			swap(arr, i, mid_index);
+			
+			arr[j+1] = key;
 		}
 	}
 	
@@ -44,7 +22,7 @@ public class InsertionSort {
 		int arr[] = {10,5,8,20,2,18};
 		int n = arr.length;
 		
-		advanceApproch(arr, n);
+		insertionSort(arr);
 		
 		for(int i=0;i<n;i++) {
 			System.out.print(arr[i] + " ");
