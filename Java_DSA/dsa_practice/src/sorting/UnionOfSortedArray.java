@@ -1,14 +1,9 @@
-package Practice;
+package sorting;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Scanner;
 import java.util.Set;
 
-public class PlayGround {
-	
+public class UnionOfSortedArray {
 	public static void solution(int a[], int b[]) {
 		Set<Integer> set = new HashSet<>();
 		
