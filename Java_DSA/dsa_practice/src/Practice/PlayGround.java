@@ -26,10 +26,14 @@ public class PlayGround {
 	}
 
     public static void main(String[] args) {
-    	int a[] = {10,20,50};
-		int b[] = {5,50,50};
-		
-		solution(a,b);
+//    	int a[] = {10,20,50};
+//		int b[] = {5,50,50};
+//		
+//		solution(a,b);
+    	
+    	if('c'>'b') {
+    		System.out.println("true");
+    	}
 		
     }
 }
